@@ -2,7 +2,7 @@ public class Game {
     public string Name;
     public string Developer;
     public int Release_year;
-    public double Rating;
+    public double Rating {get; private set;}
     public Game(string name, string developer, int year) {
         Name = name;
         Developer = developer;
