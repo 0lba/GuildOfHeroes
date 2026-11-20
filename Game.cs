@@ -15,5 +15,10 @@ public class Game {
         }
         Rating = a;
     }
-
+    public string GetInfo() {
+        return $">>> {Name} <<<\n" +
+               $"Разработчик: {Developer}\n" +
+               $"Год релиза: {Release_year}\n" +
+               $"Рейтинг: {Rating}";
+    }
 }

@@ -51,26 +51,34 @@ if (guild.Heroes.Count > 0)
 // Game GTA5 = new Game("GTA5", "Rockstar Games", 2013);
 // Game CS2 = new Game("Counter-Strike 2", "VALVE", 2023);
 // Game ER = new Game("ELDEN RING", "FromSoftware", 2022);
+// Game Portal = new Game("Portal", "VALVE", 2007);
+// Portal.mut_rating(4.9);
 // Console.WriteLine($"До действий: {GTA5.Rating}");
 // GTA5.mut_rating(-1.0);
 // Console.WriteLine($"После mut_rating(-1.0): {GTA5.Rating}");
 // GTA5.mut_rating(1.0);
 // Console.WriteLine($"После mut_rating(1.0): {GTA5.Rating}");
-// Console.WriteLine("");
-// Console.WriteLine(">>> Игра 1 <<<");
-// Console.WriteLine($"Название: {GTA5.Name}");
-// Console.WriteLine($"Разработчик: {GTA5.Developer}");
-// Console.WriteLine($"Год релиза: {GTA5.Release_year}");
-// Console.WriteLine($"Рейтинг: {GTA5.Rating}");
 // Console.WriteLine();
-// Console.WriteLine(">>> Игра 2 <<<");
-// Console.WriteLine($"Название: {CS2.Name}");
-// Console.WriteLine($"Разработчик: {CS2.Developer}");
-// Console.WriteLine($"Год релиза: {CS2.Release_year}");
-// Console.WriteLine($"Рейтинг: {CS2.Rating}");
+// Library library = new Library("Игры");
+// library.Games.Add(GTA5);
+// library.Games.Add(CS2);
+// library.Games.Add(ER);
+// library.Games.Add(Portal);
+// if (library.Games.Count > 0)
+// {
+//     Console.WriteLine($"Всего: {library.Games.Count}");
+//     Console.WriteLine($"1ый элемент: {library.Games[0].Name}");
+//     Console.WriteLine($"2ой элемент: {library.Games[library.Games.Count - 1].Name}");
+// }
 // Console.WriteLine();
-// Console.WriteLine(">>> Игра 3 <<<");
-// Console.WriteLine($"Название: {ER.Name}");
-// Console.WriteLine($"Разработчик: {ER.Developer}");
-// Console.WriteLine($"Год релиза: {ER.Release_year}");
-// Console.WriteLine($"Рейтинг: {ER.Rating}");
+// int c = 0;
+// foreach (Game i in library.Games) {
+//     if (i.Developer == "VALVE") {
+//         c++;
+//     }
+//     Console.WriteLine(i.GetInfo());
+//     Console.WriteLine();
+// }
+// Console.WriteLine($"Кол-во игр от VALVE: {c}");
+// CS2.mut_rating(1.2);
+// Console.WriteLine($"Рейтинг CS2: {library.Games[1].Rating}");
